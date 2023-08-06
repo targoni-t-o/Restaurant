@@ -1,12 +1,11 @@
-package org.demo.example.orders;
+package resturant.orders;
 
-import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 
 public class Menu {
-    private static Map<String, Dish> dishesList;
-    private static Map<String, Drink> drinksList;
+    private static final Map<String, Dish> dishesList = new HashMap<>();
+    private static final Map<String, Drink> drinksList = new HashMap<>();
 
     public static void createMenu() {
         createDishesList();
@@ -17,13 +16,13 @@ public class Menu {
 
         System.out.println("Страви:");
         for (String dishName:dishesList.keySet()) {
-            System.out.println(dishName + " ціна: " + dishesList.get(dishName).price);
+            System.out.println(dishName + " ціна: " + dishesList.get(dishName).getPrice());
         }
 
         System.out.println();
         System.out.println("Напої:");
         for (String drinkName:drinksList.keySet()) {
-            System.out.println(drinkName + " ціна: " + drinksList.get(drinkName).price);
+            System.out.println(drinkName + " ціна: " + drinksList.get(drinkName).getPrice());
         }
     }
 
@@ -34,11 +33,11 @@ public class Menu {
         Dish salad = new Dish("Салат", "робиться з огірків, помідорів, цибулі, листя салату та сиру. Заправляється олією.", 25);
         Dish fries = new Dish("Картопля фрі", "робиться з картоплі. Вариться у фрітюрниці.", 23);
 
-        dishesList.put(steak.name, steak);
-        dishesList.put(chickenWings.name, chickenWings);
-        dishesList.put(fish.name, fish);
-        dishesList.put(salad.name, salad);
-        dishesList.put(fries.name, fries);
+        dishesList.put(steak.getName(), steak);
+        dishesList.put(chickenWings.getName(), chickenWings);
+        dishesList.put(fish.getName(), fish);
+        dishesList.put(salad.getName(), salad);
+        dishesList.put(fries.getName(), fries);
     }
 
     private static void createDrinksList(){
@@ -48,11 +47,11 @@ public class Menu {
         Drink tea = new Drink("Чай", "робиться з огірків, помідорів, цибулі, листя салату та сиру. Заправляється олією.", 11);
         Drink mineralWater = new Drink("Мінеральна вода", "робиться з газированої води", 15);
 
-        drinksList.put(lemonade.name, lemonade);
-        drinksList.put(cocaCola.name, cocaCola);
-        drinksList.put(coffee.name, coffee);
-        drinksList.put(tea.name, tea);
-        drinksList.put(mineralWater.name, mineralWater);
+        drinksList.put(lemonade.getName(), lemonade);
+        drinksList.put(cocaCola.getName(), cocaCola);
+        drinksList.put(coffee.getName(), coffee);
+        drinksList.put(tea.getName(), tea);
+        drinksList.put(mineralWater.getName(), mineralWater);
     }
 
     public static Map<String, Dish> getDishesList() {

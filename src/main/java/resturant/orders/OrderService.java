@@ -1,4 +1,4 @@
-package org.demo.example.orders;
+package resturant.orders;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -70,13 +70,13 @@ public class OrderService {
        Map<Dish, Integer> orderedDishes = order.getOrderedDishes();
 
         for (Dish dish:orderedDishes.keySet()) {
-            orderTotal += dish.price * orderedDishes.get(dish);
+            orderTotal += dish.getPrice() * orderedDishes.get(dish);
         }
 
         Map<Drink, Integer> orderedDrinks = order.getOrderedDrinks();
 
         for (Drink drink:orderedDrinks.keySet()) {
-            orderTotal += drink.price * orderedDrinks.get(drink);
+            orderTotal += drink.getPrice() * orderedDrinks.get(drink);
         }
 
         return orderTotal;

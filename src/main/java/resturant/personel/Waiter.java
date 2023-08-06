@@ -1,4 +1,4 @@
-package org.demo.example.personel;
+package resturant.personel;
 
 public class Waiter extends Employee{
     public Waiter(String firstName, String lastName) {

@@ -1,9 +1,9 @@
-package org.demo.example.orders;
+package resturant.orders;
 
 public class Drink {
-    public String name;
-    public String components;
-    public int price;
+    private String name;
+    private String components;
+    private int price;
 
     public Drink(String name, String components, int price) {
         this.name = name;
@@ -15,4 +15,11 @@ public class Drink {
         System.out.println("Напой " + this.name + " робиться з " + this.components);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

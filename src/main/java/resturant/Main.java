@@ -1,15 +1,33 @@
-package org.demo.example;
+package resturant;
 
-import org.demo.example.orders.*;
-import org.demo.example.premises.*;
-import java.util.Random;
+import resturant.orders.*;
+import resturant.personel.Cook;
+import resturant.personel.Waiter;
+import resturant.premises.*;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        List<Cook> cooksList = new ArrayList<>();
+        cooksList.add(new Cook("Alice", "Peterson"));
+        Map<String, Boolean> tablesList = new HashMap<>();
+
+        Random random = new Random();
+        int tablesCount = getRandomNumber(1, 5);
+
+        for (int i = 1; i <= tablesCount; i++) {
+            tablesList.put("Столик " + i, random.nextBoolean());
+        }
+
+        List<Waiter> waitersList = new ArrayList<>();
+        waitersList.add(new Waiter("John", "Dawson"));
+
         System.out.println("Вітаємо у нашому ресторані!");
         System.out.println();
 
-        Hall hall = new Hall();
+        Hall hall = new Hall(tablesList, waitersList);
         String table = hall.getFreeTable();
 
         System.out.println("Ваш столик " + table);
@@ -20,7 +38,7 @@ public class Main {
 
         Order order = new Order();
 
-        Kitchen kitchen = new Kitchen();
+        Kitchen kitchen = new Kitchen(cooksList);
         kitchen.makeDish(order);
 
         System.out.println();

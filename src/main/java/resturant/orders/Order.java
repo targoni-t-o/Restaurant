@@ -1,10 +1,11 @@
-package org.demo.example.orders;
+package resturant.orders;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Order {
-    private Map<Dish, Integer> orderedDishes;
-    private Map<Drink, Integer> orderedDrinks;
+    private final Map<Dish, Integer> orderedDishes = new HashMap<>();
+    private final Map<Drink, Integer> orderedDrinks = new HashMap<>();
 
     public Order(){
         OrderService.orderDishes(this);

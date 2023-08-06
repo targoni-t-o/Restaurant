@@ -1,6 +1,6 @@
-package org.demo.example.personel;
+package resturant.personel;
 
-import org.demo.example.orders.Drink;
+import resturant.orders.Drink;
 
 public class Barman extends Employee{
 
@@ -9,6 +9,6 @@ public class Barman extends Employee{
     }
 
     public void makeDrink(Drink drink){
-        System.out.println("Бармен " + this.getFulName() + " робить напой " + drink.name);
+        System.out.println("Бармен " + this.getFulName() + " робить напой " + drink.getName());
     }
 }

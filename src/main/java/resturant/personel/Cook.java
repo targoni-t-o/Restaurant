@@ -1,6 +1,6 @@
-package org.demo.example.personel;
+package resturant.personel;
 
-import org.demo.example.orders.Dish;
+import resturant.orders.Dish;
 
 public class Cook extends Employee{
 
@@ -9,6 +9,6 @@ public class Cook extends Employee{
     }
 
     public void makeDish(Dish dish){
-        System.out.println("Повар " + this.getFulName() + " робить страву " + dish.name);
+        System.out.println("Повар " + this.getFulName() + " робить страву " + dish.getName());
     }
 }

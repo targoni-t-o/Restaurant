@@ -1,15 +1,16 @@
-package org.demo.example.premises;
+package resturant.premises;
 
-import org.demo.example.orders.*;
-import org.demo.example.personel.Barman;
+import resturant.orders.Drink;
+import resturant.orders.Order;
+import resturant.personel.Barman;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 
 public class Bar {
-    private ArrayList<Barman> barmenList;
+    private List<Barman> barmenList;
 
     public Bar() {
+        barmenList = new ArrayList<>();
         Barman barman = new Barman("Peter", "Petty");
         barmenList.add(barman);
     }

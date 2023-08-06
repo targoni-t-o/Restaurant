@@ -1,9 +1,9 @@
-package org.demo.example.orders;
+package resturant.orders;
 
 public class Dish {
-    public String name;
-    public String components;
-    public int price;
+    private String name;
+    private String components;
+    private int price;
 
     public Dish(String name, String components, int price) {
         this.name = name;
@@ -13,5 +13,13 @@ public class Dish {
 
     public void getComponents() {
         System.out.println("Страва " + this.name + " робиться з " + this.components);
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

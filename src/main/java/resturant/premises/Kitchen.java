@@ -1,17 +1,16 @@
-package org.demo.example.premises;
+package resturant.premises;
 
-import org.demo.example.orders.*;
-import org.demo.example.personel.Cook;
+import resturant.personel.Cook;
+import resturant.orders.Dish;
+import resturant.orders.Order;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 
 public class Kitchen {
-    private final ArrayList<Cook> cooksList = new ArrayList<>();
+    private List<Cook> cooksList;
 
-    public Kitchen() {
-        Cook cook = new Cook("Alice", "Peterson");
-        cooksList.add(cook);
+    public Kitchen(List<Cook> cooksList) {
+        this.cooksList = cooksList;
     }
 
     public void makeDish(Order order){

@@ -1,10 +1,10 @@
-package org.demo.example.personel;
+package resturant.personel;
+public class Employee {
 
-public class Person {
-    public String firstName;
-    public String lastName;
+    private String firstName;
+    private String lastName;
 
-    public Person(String firstName, String lastName) {
+    public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -12,4 +12,5 @@ public class Person {
     public String getFulName(){
         return this.lastName + " " + this.firstName;
     }
+
 }
